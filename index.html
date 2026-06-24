@@ -207,5 +207,13 @@
                     alert('Carrinnho vazio');
                     return;
                 }
+                let mensagem = 'Óla! Quero finalizar minha compra:\n\n';
+                carrinho.forEach(item => {mensagem += '- ' + item.nome + 'R$' + item.preço.toLocaleString('pt-Br') +'\n';
+
+                });
+                mensagem += '\n\Total: R$ ' + total.toLocalestring('pt-Br') + ',00';
+                let link = 'https://wa.me/5544999999?text=' + encodeURIComponent(mensagem); window.open(link,'_blank');
             }
      </script>
+     </body>
+</html>
