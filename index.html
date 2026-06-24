@@ -188,7 +188,8 @@
                 } else { 
                     div.innerHTML = ''; carrinho.forEach(item=> {
                         div.innerHTML += `<p>${item.nome} - R$ $ {item.preço.toLocaleString('pt-BR')}</p>`;
-                    })
+                    });
                 }
+                document.getElementById('qtd').innerHTML = carrinho.length;
             }
      </script>
