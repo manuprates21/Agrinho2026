@@ -175,6 +175,9 @@
             document.getElementById(pagina).classList.add('escondido');
         }
         function adicionarCarrinho(nome, preço){
-            carrinho.push({nome, preço})
+            carrinho.push({nome, preço});
+            total += preço;
+            atualizarCarrinho();
+            alert(nome + ' adiionado ao carrinho!');
         }
      </script>
