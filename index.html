@@ -193,4 +193,13 @@
                 document.getElementById('qtd').innerHTML = carrinho.length;
                 document.getElemententById('total').innerHTML = 'total: R$ ' + total.toLocaleString('pt-Br') + ',00';
             }
+            function pagar(Forma) {
+                if(carrinho.length === 0) { alert('Carrinho vazio! adicione produtos primeiro.');
+                } else {
+                    alert('campra finalizada via' + forma + '!\nTotal:R$ ' + total.toLocalestring ( 'pt-BR') + ', 00');
+                    carrinho = [];
+                    total = 0;
+                    atualizarCarrinho();
+                }
+            }
      </script>
