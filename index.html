@@ -185,6 +185,10 @@
                 let div = document.getElementsById('itens-carrinho');
                 if(carrinho.length === 0) {
                     div.innerHTML = '<p>Carrinho vazio</p>';
+                } else { 
+                    div.innerHTML = ''; carrinho.forEach(item=> {
+                        div.innerHTML += `<p>${item.nome} - R$ $ {item.preço.toLocaleString('pt-BR')}</p>`;
+                    })
                 }
             }
      </script>
