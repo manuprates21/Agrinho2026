@@ -124,7 +124,21 @@
                     <button class="btn" onclick="alert('pix')">Pagar via pix</button>
                     <button class="btn btn-whats" onclick="pagarWhats()">Pagar pelo whatsApp</button>
                 </div>
-
-                 </body>
-
-                 </html>
+                <script>
+                let carrinho = [];
+                let total = 0;
+                function adicionarCarrinho(nome, preco) {
+                carrinho.push({nome, preco});
+                     total += preco;
+             document.getElementById('itens-carrinho').innerHTML = carrinho.map(i => `<p>${i.nome} - R$ ${i.preco.toLocaleString('pt-BR')}</p>`).join('');
+             document.getElementById('qtd').innerText = carrinho.length;
+             document.getElementById('total').innerText = 'R$ ' + total.toLocaleString('pt-BR') + ',00';
+                }
+            function pagarWhats() {
+            if(carrinho.length === 0) return alert('Carrinho vazio!');
+            let msg = 'Olá! Quero comprar:\n' + carrinho.map(i => `- ${i.nome}`).join('\n') + `\n\nTotal: R$ ${total.toLocaleString('pt-BR')},00`;
+            window.open('https://wa.me/5544999999?text=' + encodeURIComponent(msg), '_blank');
+            }
+        </script>
+  </body>
+   </html>
