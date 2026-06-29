@@ -50,6 +50,13 @@
         .galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px ; }
         .galeria img { width: 100%; border-radius: 8px; }
         .galeria p { text-align: center; margin-top: 5px; }
+        .grid-produtos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .produto{ border: 2px solid #ddd; padding: 15px; border-radius: 10px; background: #fafafa; text-align: center; }
+        .produto img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+        .preco { font-size: 22px; font-weight: bold; color: #2d5016; margin: 10px 0; }
+        .carrinho-box { background: #e8f5e8; padding: 25px; margin-top: 30px; border-radius: 10px; border: 3px solid #2d5016; }
+        #total { font-size: 32px; font-weight: bold; color: #2d5016; }
+        .btn-whats { background: #25D366; font-size: 18px; margin-top: 10px; width: 100%; }
         </style>
     </head>
     <body>
@@ -117,7 +124,7 @@
                     <button class="btn" onclick="alert('pix')">Pagar via pix</button>
                     <button class="btn btn-whats" onclick="pagarWhats()">Pagar pelo whatsApp</button>
                 </div>
-                
+
                  </body>
 
                  </html>
